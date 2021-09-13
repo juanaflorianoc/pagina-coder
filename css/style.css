@@ -1,0 +1,275 @@
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@font-face {
+    font-family: 'Zing';
+    src: url(web-fonts/zingrust-base.otf);
+}
+
+
+/* COLORES */
+:root{
+    --firstColor: #1d1d1b;
+    --secondColor: #f9d738;
+    --thirdColor: #e72b88;
+}
+
+
+/* FONT SIZE */
+html{
+    font-size: 10px;
+}
+
+
+
+/* GRID PARA SECCIONES DE LOS HTML */
+/* celular */
+@media only screen and (min-width: 320px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* computadora */
+@media only screen and (min-width: 1200) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+
+
+body {
+    background-color: #FCF7E6;
+}
+
+
+
+
+/* header */
+.header-home {
+    background-color: var(--firstColor);
+}
+
+.header-home a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+}
+
+/*.menu-principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}*/
+
+/*ul ul {
+   position: absolute;
+   display: none;
+   justify-content: space-around;
+}*/
+
+ul ul li {
+   display: block;
+   background: var(--firstColor);
+   padding: 10px;
+   word-spacing: 5px;
+}
+
+ul li:hover ul {
+   display: block;
+}
+
+/* fin header */
+
+
+
+
+
+/* carrusel */
+.image-carrousel {
+    width: 100%;
+    display: block;
+}
+/* fin carrusel */
+
+
+
+
+/* destacadas */
+.section-feria,
+.section-showroom {
+   margin: 100px;
+   padding: 50px;
+   background-image: linear-gradient(to bottom, #FCF7E6, white);
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: 
+   "area1 area2";
+}
+
+.title-secciones1,
+.title-secciones2 {
+    color: var(--color-principal);
+    font-family: 'Zing';
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+.text-secciones1,
+.text-secciones2 {
+    color: var(--color-principal);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    /*width: 40%;*/
+}
+
+.text-secciones1,
+.title-secciones1 {
+    text-align: right;
+}
+
+
+/* GRID sistem showroom */
+.item-showroom1 {
+    grid-area: area1;
+}
+.item-showroom2{
+    grid-area: area2;
+}
+.grid-justify-start{
+    justify-self: start;
+}
+
+.grid-justify-end{
+    justify-self: end;
+}
+
+
+
+/* GRID sistem feria */
+.item-feria1 {
+    text-align: left;
+    grid-area: area1;
+}
+.item-feria2 {
+    grid-area: area2;
+    justify-items: end;
+}
+
+.img-showroom:hover,
+.img-feria:hover {
+    transition-property: all;
+    transition-duration: 2s;
+    transform: scale(1.1,1.1);
+}
+
+/* fin destacadas */
+
+
+
+
+/* dudas */
+.section-doubts {
+    width: 100%;
+}
+
+.list-doubts {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* fin dudas */
+
+
+
+
+/* footer */
+.footer-home {
+    background-color: var(--thirdColor);
+    /*display: block;*/
+    padding: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.lista-footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* fin footer */
+
+
+
+
+
+
+
+/* TITULOS DE ARCHIVOS HTML */
+.title-accesories,
+.title-adults,
+.title-kids,
+.title-sell{
+    color: var(--color-terciario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+}
+.items-adults,
+.items-accesories,
+.items-kids,
+.items-sell {
+    color: var(--color-terciario);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* GRID DE ARCHIVOS HTML */
+.grid {
+    margin: 50px;
+
+    display: grid;
+    grid-template-rows: 150px 150px 150px 150px;
+
+    grid-column-gap: 50px;
+    grid-row-gap: 100px;
+}
+
+.grid-item {
+    padding: 50px;
+    border: 2px black solid;
+    background-color: var(--secondColor);
+}
+
+
